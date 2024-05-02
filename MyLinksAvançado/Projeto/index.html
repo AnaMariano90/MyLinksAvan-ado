@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+  <!--config por detrás da página-->
+  <head>
+    <!--fonte da letra-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!--aceitar carac especial-->
+    <meta charset="UTF-8" />
+    <!--unica coisa daqui que aparece-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto</title>
+    <!--chamando o css-->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <!--onde a magia acontece-->
+  <body>
+    <!--aberto aqui para chamar na pasta css-->
+    <div id="container"></div>
+
+    <div id="profile">
+      <img src="./assets/chloeNoite.png.png" alt="Avatar" />
+      <!-- sempre por ./ para procurar a pasta-->
+      <p>@Instagram</p>
+      <br /><br />
+    </div>
+
+    <!--div para os buttons-->
+    <div id="switch" onclick="toggleMode()">
+      <button></button>
+      <span></span>
+    </div>
+
+    <!--criacao de listas-->
+    <ul>
+      <li>
+        <!--item da lista-->
+        <a href="#">Whatsapp Atendimento</a>
+        <!--Por link-->
+      </li>
+
+      <li>
+        <a href="#">Whatsapp Catálogo</a>
+      </li>
+
+      <li>
+        <a href="#">Instagram Pessoal</a>
+      </li>
+
+      <li>
+        <a href="#" target="_blank">Meu Portfólio</a>
+      </li>
+    </ul>
+
+    <!--acrescentando links aos icons-->
+    <div id="Social-links">
+      <!--https://ionic.io/ionicons-->
+      <a href="https://github.com/anamariano90" target="_blank">
+        <ion-icon name="logo-github"></ion-icon
+      ></a>
+      <a href="https://instagram.com/analuiza_oliosi" target="_blank"
+        ><ion-icon name="logo-instagram"></ion-icon
+      ></a>
+      <a href="https://youtube" target="_blank"
+        ><ion-icon name="logo-youtube"></ion-icon
+      ></a>
+      <a href="https://linkedin.com" target="_blank"
+        ><ion-icon name="logo-linkedin"></ion-icon
+      ></a>
+    </div>
+
+    <!--parte de baixo do site-->
+    <footer>
+      <ion-icon name="heart"></ion-icon> Feito por
+      <a href="">X</a>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!--Chamando o JavaScript-->
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+* {
+  /*todo*/
+  margin: 0;
+  padding: 0; /*espaco entre conteudo e borda*/
+  box-sizing: border-box;
+} /* tirar os padroes de navegador*/
+
+:root {
+  /*noite*/
+  /*funcao*/
+  --text-color: white;
+  --bg-url: url(assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.05);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  /*dia*/
+  --text-color: black;
+  --bg-url: url(./assets/bg-desktop-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+  /*
+Grupo de modificacao avulso
+  background-image: url(assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: top;
+  background-size: cover;
+*/
+  /* Resumido*/
+
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 100%;
+  max-width: 588px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+  /*alinhar caixa no centro nos lados, 56== cima. auto, lados, 0 baixo*/
+}
+
+/* div eh um elemento block, img/a = inline == nao usa margin auto*/
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px; /* altura segue diretrizes da imagem*/
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+/*Switch*/
+
+#switch {
+  position: relative;
+  width: 64px;
+
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); /* para funcionar em outros navegadores*/
+  border-radius: 9999px;
+}
+/*Posicionar elementos (tem que ser display block)*/
+
+/* Listas */
+ul {
+  list-style: none; /*tirar os frufru automatico*/
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /*That one align the BOX*/
+  align-items: center;
+
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  /* that one align the TEXT*/
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+
+  padding: 16px 24px;
+  /*Carac dispo no figma*/
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+
+  text-decoration: none; /*tirar a linha embaixo*/
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/* Social Links*/
+
+#Social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px; /*espaco entre eles*/
+
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#Social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%; /*uma bolinha perfeita*/
+}
+
+#Social-links a:hover {
+  /*quando passa o mouse*/
+  background: var(--highlight-color);
+  padding: 16px;
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 16px;
+  transition: 0.2s;
+  border-radius: 15%;
+}
